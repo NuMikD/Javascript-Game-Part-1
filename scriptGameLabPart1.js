@@ -9,33 +9,31 @@ let gameStart = prompt('Would you like to play a game? Please enter yes or no:')
       let userWins = 0;
       let grantWins = 0;
 
-    alert(`Let the Game Begin! ${userName}'s Starting Health is ${userHlthPts}, and Grant's Starting Health is ${grantHlthPts}`);
+      console.log(`Let the Game Begin! ${userName}'s Starting Health is ${userHlthPts}, and Grant's Starting Health is ${grantHlthPts}`);
 
     while (grantWins || userWins < 3) {
       while (userHlthPts > 0) {
   
-      alert(`${userName}'s Health: ${userHlthPts -= Math.floor((Math.random()* + 4) + 1)}`);
-      alert(`Grant's Health: ${grantHlthPts -= Math.floor((Math.random() * 3) + 1)}`);
+        console.log(`${userName}'s Health: ${userHlthPts -= Math.floor((Math.random()* + 4) + 1)}`);
+      console.log(`Grant's Health: ${grantHlthPts -= Math.floor((Math.random() * 3) + 1)}`);
           
           if(grantHlthPts <= 0) {
             userWins++;
-            alert(`${userName}'s wins: ${userWins}`);
+            console.log(`${userName}'s wins: ${userWins}`);
             grantHlthPts = 10;
             break;          
           } else if(userHlthPts < 1) {
-            alert('Game Over - Grant won !');
+            console.log('Game Over - Grant won !');
             break;
-          } 
-          
-            
+          }            
       }
     }
 
-alert(`"Congratulations ${userName}! You've won!"`);
+    console.log(`"Congratulations ${userName}! You've won!"`);
 
 
 if (gameStart.toLowerCase() === "no") {
-    alert("Maybe you can play next time?");
+  console.log("Maybe you can play next time?");
 }
 
 }
